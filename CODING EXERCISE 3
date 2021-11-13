@@ -1,0 +1,33 @@
+package selfProgramming;
+
+import java.util.Scanner;
+
+public class Exercise8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double amount1, amount2;
+		double balance;
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.println("Enter your current amount: ");
+		amount1 = input.nextDouble();
+		
+		System.out.println("Enter amount you want to withdraw: ");
+		amount2 = input.nextDouble();
+		
+		balance = amount1 - amount2;
+		
+		if(amount2 <= balance) {
+			balance = balance - amount2;
+			System.out.println("Acct new balance = " +balance);
+		}
+		
+		else {
+			System.out.println("TRANSACTION NOT ALLOWED");
+		}
+	}
+
+}
