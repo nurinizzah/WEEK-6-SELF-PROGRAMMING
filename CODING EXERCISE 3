@@ -1,0 +1,34 @@
+package selfProgramming;
+
+import java.util.Scanner;
+
+public class IfElseExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		double amount, price;
+		double balance;
+		double OVERDRAFT_PENALTY;
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.println("Enter price: ");
+		price = input.nextDouble();
+		
+		System.out.println("Enter your amount: ");
+		amount = input.nextDouble();
+		
+		balance = price-amount;
+		OVERDRAFT_PENALTY = amount-price;
+		
+		if (amount <= balance) {
+			balance = balance - amount;
+			System.out.println("Your balance is: "+balance);
+		}
+		else
+			balance = balance - OVERDRAFT_PENALTY;
+			System.out.printf("You need to pay RM %.2f" ,balance);
+	}
+
+}
