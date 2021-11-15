@@ -1,0 +1,32 @@
+package selfProgramming;
+import java.util.Scanner;
+public class Example5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int mark;
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.println("Enter your mark: ");
+		mark = input.nextInt();
+		
+		if (mark>=90) {
+			System.out.println("You got A");
+		}
+		else if (mark>=80) {
+			System.out.println("You got B");
+		}
+		else if (mark>=70) {
+			System.out.println("You got C");
+		}
+		else if (mark>=60) {
+			System.out.println("You got D");
+		}
+		else {
+			System.out.println("You got F");
+		}
+	}
+
+}
